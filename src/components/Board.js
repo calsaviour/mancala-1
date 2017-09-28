@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Board = ({ board }) => (
+const Board = ({ board, clickHandler }) => (
   <div>
-  	{board.map(hole => (
-      <span> {hole} </span>
+  	{board.map((hole, i) => (
+      <button key={i} onClick={() => clickHandler(i)}>
+        {hole}
+      </button>
     ))}
   </div>
 )
