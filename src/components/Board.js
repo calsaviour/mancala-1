@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Board = props => (
+const Board = ({ board }) => (
   <div>
-  	{props.board.map(hole => (
+  	{board.map(hole => (
       <span> {hole} </span>
     ))}
   </div>

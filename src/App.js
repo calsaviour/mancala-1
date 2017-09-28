@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
 import Board from './components/Board'
+import StatusBar from './components/StatusBar'
 import './App.css';
 
 const intialState = {
@@ -25,6 +26,11 @@ class App extends Component {
       <div className="App">
 
         <Header />
+
+        <StatusBar
+          player={this.state.player}
+          isOver={this.state.isOver}
+        />
 
         <Board board={this.state.board} />
 
