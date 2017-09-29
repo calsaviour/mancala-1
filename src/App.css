@@ -1,3 +1,8 @@
+:root {
+  --board-colour: #FFAA5F;
+  --hole-colour: #fec797;
+}
+
 .App {
   text-align: center;
 }
@@ -25,4 +30,46 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* board */
+
+.board {
+  margin: 2em auto;
+  background: var(--board-colour);
+  width: 50%;
+  height: 4em;
+  padding: 1em;
+  display: flex;
+}
+
+.home {
+  width: 15%;
+  border-radius: 100%;
+  background: var(--hole-colour);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.holes-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.holes-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hole {
+  width: 2em;
+  height: 1.5em;
+  border-radius: 100%;
+  background: var(--hole-colour);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
