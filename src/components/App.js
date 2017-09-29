@@ -3,13 +3,15 @@ import Header from './Header'
 import Board from './Board'
 import StatusBar from './StatusBar'
 
-import { makeMove } from '../utils'
+import { makeMove, emptyHomes } from '../utils'
 
 import '../App.css';
 
+const START_AMOUNT = 4
+
 const intialState = {
   player: 0,
-  board: [3, 3, 3, 3, 3, 3, 0, 3, 3, 3, 3, 3, 3, 0],
+  board: emptyHomes(Array(14).fill(START_AMOUNT)),
   isOver: false,
   message: ''
 }
@@ -24,7 +26,6 @@ class App extends Component {
   }
 
   resetHandler () {
-    console.log(this.state)
     this.setState(intialState)
   }
 
